@@ -1,8 +1,8 @@
 using System;
 
-namespace cadastroPessoa
+namespace cadastroPessoa 
 {
-    public class PessoaFisica 
+    public class PessoaFisica : Pessoa
     {
         public string cpf { get; set; }
 
