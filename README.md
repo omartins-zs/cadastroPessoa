@@ -2,7 +2,7 @@
 <h1 align="center">:woman: Sistema Cadastro de Pessoa	:man:
 </h1>
 <p align="center"> Utilização de Herança e Composiçao</p> 
-<br><br>
+<br>
 
 Introdução ao .NET: [Documentação C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 
