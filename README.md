@@ -43,6 +43,11 @@ dotnet build
 
 Fazer o OminiSharp funcionar:
 
+- Fazer o Download do SDK e Runtime novamente
+- Instalar o Developer Pack e Testar
+
+OU
+
 - Ir em settings
 - Acessar Extensions -> c# configuration ou pesquisar mono
 - OminiSharp mudar para Auto ou Always
