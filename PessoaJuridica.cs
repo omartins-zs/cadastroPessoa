@@ -6,6 +6,11 @@ namespace cadastroPessoa
 
         public string RazaoSocial { get; set; }
 
+        // Adicionando Polimorfismo
+        public override void pagarImposto(float salario)
+        {
+
+        }
     }
 
 }
