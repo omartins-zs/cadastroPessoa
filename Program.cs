@@ -6,7 +6,13 @@ namespace cadastroPessoa
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Usado apenas para chamar os objetos
+            PessoaFisica pf = new PessoaFisica();
+
+            // Para criar novo Endereço e Pessoa
+            PessoaFisica novaPf = new PessoaFisica();
+            Endereco end = new Endereco();
+
         }
     }
 }
