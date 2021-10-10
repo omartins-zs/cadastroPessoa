@@ -13,6 +13,11 @@ namespace cadastroPessoa
             PessoaFisica novaPf = new PessoaFisica();
             Endereco end = new Endereco();
 
+            // Instanciando Endereco
+            end.logradouro = "Z";
+            end.numero = 34;
+            end.complemento = "Proximo ao Senai Presidente Dutra";
+            end.enderecoComercial = false;
         }
     }
 }
