@@ -25,20 +25,27 @@ namespace cadastroPessoa
             novaPf.nome = "Pessoa Fisica";
             novaPf.dataNascimento = new DateTime(2000, 06, 15);
 
-            // Mostrar no terminal
-            Console.WriteLine(novaPf.endereco.logradouro);
+            // // Mostrar no terminal
+            // Console.WriteLine(novaPf.endereco.logradouro);
 
-            // Interpolação
-            Console.WriteLine($"Rua: {novaPf.endereco.logradouro}, {novaPf.endereco.numero}");
+            // // Interpolação
+            // Console.WriteLine($"Rua: {novaPf.endereco.logradouro}, {novaPf.endereco.numero}");
 
-            // Concatenaçao
-            Console.WriteLine("Rua:" + novaPf.endereco.logradouro + ", " + novaPf.endereco.numero);
+            // // Concatenaçao
+            // Console.WriteLine("Rua:" + novaPf.endereco.logradouro + ", " + novaPf.endereco.numero);
 
-            // Sem pular linha
-             Console.WriteLine(novaPf.endereco.logradouro);
+            // // Sem pular linha
+            // Console.WriteLine(novaPf.endereco.logradouro);
 
-            // Mostrar varios comandos no mesmo console (Mostra como voce deixa no codigo)
-            Console.WriteLine($@"Rua: {novaPf.endereco.logradouro}, {novaPf.endereco.numero}");  
+            // // Mostrar varios comandos no mesmo console (Mostra como voce deixa no codigo)
+            // Console.WriteLine($@"Rua: {novaPf.endereco.logradouro}, {novaPf.endereco.numero}");
+
+            // Usando a funçao de validar data | Passo a Passo | E mostrando no Console 
+            bool idadeValida = novaPf.ValidarDataNascimento(novaPf.dataNascimento);
+            Console.WriteLine(idadeValida);
+
+            // Usando a funçao de validar data | Metodo Direto | E mostrando no Console
+            Console.WriteLine(novaPf.ValidarDataNascimento(novaPf.dataNascimento));  
         }
     }
 }
