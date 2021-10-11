@@ -24,6 +24,21 @@ namespace cadastroPessoa
             novaPf.cpf = "32442342198";
             novaPf.nome = "Pessoa Fisica";
             novaPf.dataNascimento = new DateTime(2000, 06, 15);
+
+            // Mostrar no terminal
+            Console.WriteLine(novaPf.endereco.logradouro);
+
+            // Interpolação
+            Console.WriteLine($"Rua: {novaPf.endereco.logradouro}, {novaPf.endereco.numero}");
+
+            // Concatenaçao
+            Console.WriteLine("Rua:" + novaPf.endereco.logradouro + ", " + novaPf.endereco.numero);
+
+            // Sem pular linha
+             Console.WriteLine(novaPf.endereco.logradouro);
+
+            // Mostrar varios comandos no mesmo console (Mostra como voce deixa no codigo)
+            Console.WriteLine($@"Rua: {novaPf.endereco.logradouro}, {novaPf.endereco.numero}");  
         }
     }
 }
