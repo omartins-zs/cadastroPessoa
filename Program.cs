@@ -18,6 +18,12 @@ namespace cadastroPessoa
             end.numero = 34;
             end.complemento = "Proximo ao Senai Presidente Dutra";
             end.enderecoComercial = false;
+        
+            // Instanciando Pessoa
+            novaPf.endereco = end;
+            novaPf.cpf = "32442342198";
+            novaPf.nome = "Pessoa Fisica";
+            novaPf.dataNascimento = new DateTime(2000, 06, 15);
         }
     }
 }
