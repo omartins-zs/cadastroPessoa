@@ -40,12 +40,21 @@ namespace cadastroPessoa
             // // Mostrar varios comandos no mesmo console (Mostra como voce deixa no codigo)
             // Console.WriteLine($@"Rua: {novaPf.endereco.logradouro}, {novaPf.endereco.numero}");
 
-            // Usando a funçao de validar data | Passo a Passo | E mostrando no Console 
+            // Usando a funçao de validar data | Passo a Passo
             bool idadeValida = novaPf.ValidarDataNascimento(novaPf.dataNascimento);
-            Console.WriteLine(idadeValida);
+            // Console.WriteLine(idadeValida);
 
-            // Usando a funçao de validar data | Metodo Direto | E mostrando no Console
-            Console.WriteLine(novaPf.ValidarDataNascimento(novaPf.dataNascimento));  
+            // // Usando a funçao de validar data | Metodo Direto
+            // Console.WriteLine(novaPf.ValidarDataNascimento(novaPf.dataNascimento));
+
+            if (idadeValida == true)
+            {
+                Console.WriteLine($"Cadastro Aprovado!");
+            }
+            else
+            {
+                Console.WriteLine($"Cadastro Reprovado!");
+            } 
         }
     }
 }
