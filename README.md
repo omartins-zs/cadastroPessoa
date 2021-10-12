@@ -8,12 +8,46 @@ Introdução ao .NET: [Documentação C#](https://docs.microsoft.com/pt-br/dotne
 
 Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/05/oop_cph1.htm)
 
+
+
+ 
 ### Extensões: 
 
 * C#
 * C# Extensions (jchannon)
 * C# Snippets
 * C# XML Documentation
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="4">UC9 SA2 Codificação Back-End</th>
+  </tr>
+  <tr>
+    <th colspan="4"></th>
+  </tr>
+  <tr>
+    <th>Desafio</th>
+    <th>Data do Encontro</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>Encontro Remoto 1</td>
+    <td align="center">24/09</td>
+    <td align="center">✔️</td>
+  </tr>
+  <tr>
+    <td>Encontro Remoto 2</td>
+    <td align="center">01/10</td>
+    <td align="center">✔️</td>
+  </tr>
+  <tr>
+    <td>Encontro Remoto 3</td>
+    <td align="center">08/10</td>
+    <td align="center">✔️</td>
+  </tr>
+</table>
 
 
 ### 🔴 Requisitos:
@@ -36,7 +70,7 @@ dotnet build
 <hr>
 
 ### Atalho:exclamation:
- >cwl -> Escreve o ConsoleWriteLine();*
+ >cwl -> Escreve o ConsoleWriteLine();
 
 
 ### Problemas comuns :x:
