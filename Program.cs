@@ -75,7 +75,17 @@ namespace cadastroPessoa
             novaPj.endereco = end;
             novaPj.cnpj = "31235679230001";
             novaPj.RazaoSocial = "Pessoa Juridica";
-            
+
+            // No Pessoa Fisica guardando no bool | Exemplo a baixo realizado direto
+            // Se for condiçao true nao precisa adiconar return true | Se for false no inicio da comparação adicionar o "!"
+            if (pj.ValidarCNPJ(novaPj.cnpj))
+            {
+                Console.WriteLine($"CNPJ Cadastrado com Sucesso");
+            }
+            else
+            {
+                Console.WriteLine($"CNPJ iNVALIDO");
+            };
         }
     }
 }
