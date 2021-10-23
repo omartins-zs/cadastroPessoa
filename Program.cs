@@ -56,7 +56,7 @@ namespace cadastroPessoa
             //         Console.WriteLine($"Cadastro Reprovado!");
             //     } 
 
-
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
 
             // Instancia a Pessoa Juridica e Chama Metodo
             PessoaJuridica pj = new PessoaJuridica();
