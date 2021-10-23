@@ -6,6 +6,8 @@ namespace cadastroPessoa
     {
         static void Main(string[] args)
         {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkRed;
 
             Console.WriteLine($@"
 ===============================================
@@ -13,6 +15,17 @@ namespace cadastroPessoa
 |         Pessoas Fisica e Juridica           |
 ===============================================
 ");
+
+            Console.WriteLine($@"
+|================================================|
+|       Escolha uma das opções abaixo            |
+|------------------------------------------------|
+|       1 - Pessoa Fisica                        |
+|       2 - Pessoa Juridica                      |
+|                                                |
+|       0 - Sair                                 |
+|================================================|
+                ");
             // Usado apenas para chamar os objetos
             //     PessoaFisica pf = new PessoaFisica();
 
