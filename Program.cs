@@ -6,6 +6,13 @@ namespace cadastroPessoa
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine($@"
+===============================================
+|    Bem Vindo ao Sistema de Cadastro de      |
+|         Pessoas Fisica e Juridica           |
+===============================================
+");
             // Usado apenas para chamar os objetos
             //     PessoaFisica pf = new PessoaFisica();
 
