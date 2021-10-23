@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace cadastroPessoa
 {
@@ -15,6 +16,9 @@ namespace cadastroPessoa
 |         Pessoas Fisica e Juridica           |
 ===============================================
 ");
+
+            // Usando Function Da Barra de Carregamento | Adicionando "."
+            AdicionarDot("Iniciando");
 
             Console.WriteLine($@"
 |================================================|
@@ -106,6 +110,22 @@ namespace cadastroPessoa
             {
                 Console.WriteLine($"CNPJ iNVALIDO");
             };
+        }
+        static void AdicionarDot(string textoCarregamento)
+        {
+            Console.ResetColor();
+
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.WriteLine(textoCarregamento);
+
+            Thread.Sleep(500);
+            for (var i = 0; i < 10; i++)
+            {
+                Console.Write($".");
+                Thread.Sleep(250);
+            }
+            Console.ResetColor();
         }
     }
 }
