@@ -52,6 +52,11 @@ Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/
     <td align="center">15/10</td>
     <td align="center">✔️</td>
   </tr>
+ <tr>
+    <td>Encontro Remoto 5</td>
+    <td align="center">22/10</td>
+    <td align="center">✔️</td>
+  </tr>
 </table>
 
 
