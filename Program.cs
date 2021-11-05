@@ -75,7 +75,7 @@ namespace cadastroPessoa
                             Console.WriteLine($"Cadastro Reprovado!");
                         }
 
-                        Console.WriteLine(pf.pagarImposto(novaPf.rendimento));
+                        Console.WriteLine(pf.pagarImposto(novaPf.rendimento).ToString("N2"));
 
                         break;
 
@@ -109,7 +109,7 @@ namespace cadastroPessoa
                         {
                             Console.WriteLine($"CNPJ Cadastrado com Sucesso");
                         };
-                        Console.WriteLine(pj.pagarImposto(novaPj.rendimento));
+                        Console.WriteLine(pj.pagarImposto(novaPj.rendimento).ToString("N2"));
 
                         break;
 
