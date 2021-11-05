@@ -20,6 +20,8 @@ Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/
 
 <br>
 
+<div> 
+ 
 <table>
   <tr>
     <th colspan="4">UC9 SA2 Codificação Back-End</th>
@@ -31,6 +33,7 @@ Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/
     <th>Desafio</th>
     <th>Data do Encontro</th>
     <th>Status</th>
+
   </tr>
   <tr>
     <td>Encontro Remoto 1</td>
@@ -41,12 +44,13 @@ Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/
     <td>Encontro Remoto 2</td>
     <td align="center">01/10</td>
     <td align="center">✔️</td>
+
   </tr>
   <tr>
     <td>Encontro Remoto 3</td>
     <td align="center">08/10</td>
     <td align="center">✔️</td>
-  </tr>
+ </tr>
   <tr>
     <td>Encontro Remoto 4</td>
     <td align="center">15/10</td>
@@ -57,8 +61,13 @@ Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/
     <td align="center">22/10</td>
     <td align="center">✔️</td>
   </tr>
-</table>
-
+  <tr>
+    <td>Encontro Remoto 6</td>
+    <td align="center">29/10</td>
+    <td align="center">✔️</td>
+  </tr>
+  </table>
+ </div>
 
 ### 🔴 Requisitos:
 
