@@ -118,7 +118,6 @@ namespace cadastroPessoa
                         Console.WriteLine($"Obrigado Por Utilizar nosso sistema");
 
                         Console.ForegroundColor = ConsoleColor.DarkBlue;
-                        Console.BackgroundColor = ConsoleColor.White;
 
                         Console.WriteLine($"Finalizando");
                         Thread.Sleep(500);
@@ -146,7 +145,6 @@ namespace cadastroPessoa
             Console.ResetColor();
 
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.BackgroundColor = ConsoleColor.White;
             Console.WriteLine(textoCarregamento);
 
             Thread.Sleep(500);
