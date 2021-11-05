@@ -58,6 +58,8 @@ namespace cadastroPessoa
                         novaPf.endereco = endPf;
                         novaPf.cpf = "32442342198";
                         novaPf.nome = "Pessoa Fisica";
+                        // Instanciando o rendimento
+                        novaPf.rendimento = 1500;
                         novaPf.dataNascimento = new DateTime(2000, 06, 15);
 
                         // Usando a funçao de validar data | Passo a Passo
@@ -72,6 +74,8 @@ namespace cadastroPessoa
                         {
                             Console.WriteLine($"Cadastro Reprovado!");
                         }
+
+                        Console.WriteLine(pf.pagarImposto(novaPf.rendimento));
 
                         break;
 
@@ -93,6 +97,7 @@ namespace cadastroPessoa
                         novaPj.endereco = endPj;
                         novaPj.cnpj = "31235679230001";
                         novaPj.RazaoSocial = "Pessoa Juridica";
+                        novaPj.rendimento = 5000;
 
                         // No Pessoa Fisica guardando no bool | Exemplo a baixo realizado direto
                         // Se for condiçao true nao precisa adiconar return true | Se for false no inicio da comparação adicionar o "!"
@@ -103,8 +108,9 @@ namespace cadastroPessoa
                         else
                         {
                             Console.WriteLine($"CNPJ Cadastrado com Sucesso");
-                        }
- ;
+                        };
+                        Console.WriteLine(pj.pagarImposto(novaPj.rendimento));
+
                         break;
 
                     case "0":
