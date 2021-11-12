@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace cadastroPessoa
@@ -23,9 +24,39 @@ namespace cadastroPessoa
             // Criaçao da Variavel opcao
             string opcao;
 
+            // Criaçao da Variavel opcao Inicial Listar e Cadastrar
+            string opcaoInicial;
+
+
             do
             {
                 Console.WriteLine($@"
+|================================================|
+|       Escolha uma das opções abaixo            |
+|------------------------------------------------|
+|       1 - Listar                               |
+|       2 - Cadastrar                            |
+|                                                |
+|       0 - Sair                                 |
+|================================================|
+                ");
+
+                opcaoInicial = Console.ReadLine();
+             
+                switch (opcaoInicial)
+                {
+                    case "1":
+
+
+                        //    Ainda nao sei / Nao fiz
+
+                        break;
+
+                    case "2":
+                    
+                        do
+                        {
+                            Console.WriteLine($@"
 |================================================|
 |       Escolha uma das opções abaixo            |
 |------------------------------------------------|
@@ -35,84 +66,108 @@ namespace cadastroPessoa
 |       0 - Sair                                 |
 |================================================|
                 ");
+                        
+                            opcao = Console.ReadLine();
 
-                opcao = Console.ReadLine();
+                            switch (opcao)
+                            {
+                                case "1":
+                                    // Usado apenas para chamar os objetos
+                                    PessoaFisica pf = new PessoaFisica();
+                                    // Para criar novo Endereço e Pessoa
+                                    PessoaFisica novaPf = new PessoaFisica();
+                                    Endereco endPf = new Endereco();
 
-                switch (opcao)
-                {
-                    case "1":
-                        // Usado apenas para chamar os objetos
-                        PessoaFisica pf = new PessoaFisica();
+                                    // Instanciando Endereco
+                                    endPf.logradouro = "Z";
+                                    endPf.numero = 34;
+                                    endPf.complemento = "Proximo ao Senai Presidente Dutra";
+                                    endPf.enderecoComercial = false;
 
-                        // Para criar novo Endereço e Pessoa
-                        PessoaFisica novaPf = new PessoaFisica();
-                        Endereco endPf = new Endereco();
+                                    // Instanciando Pessoa
+                                    novaPf.endereco = endPf;
+                                    novaPf.cpf = "32442342198";
+                                    novaPf.nome = "Pessoa Fisica";
+                                    // Instanciando o rendimento
+                                    novaPf.rendimento = 1500;
+                                    novaPf.dataNascimento = new DateTime(2000, 06, 15);
 
-                        // Instanciando Endereco
-                        endPf.logradouro = "Z";
-                        endPf.numero = 34;
-                        endPf.complemento = "Proximo ao Senai Presidente Dutra";
-                        endPf.enderecoComercial = false;
+                                    // Usando a funçao de validar data | Passo a Passo
+                                    bool idadeValida = novaPf.ValidarDataNascimento(novaPf.dataNascimento);
+                                    // Console.WriteLine(idadeValida);
 
-                        // Instanciando Pessoa
-                        novaPf.endereco = endPf;
-                        novaPf.cpf = "32442342198";
-                        novaPf.nome = "Pessoa Fisica";
-                        // Instanciando o rendimento
-                        novaPf.rendimento = 1500;
-                        novaPf.dataNascimento = new DateTime(2000, 06, 15);
+                                    if (idadeValida == true)
+                                    {
+                                        Console.WriteLine($"Cadastro Aprovado!");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine($"Cadastro Reprovado!");
+                                    }
 
-                        // Usando a funçao de validar data | Passo a Passo
-                        bool idadeValida = novaPf.ValidarDataNascimento(novaPf.dataNascimento);
-                        // Console.WriteLine(idadeValida);
+                                    Console.WriteLine(pf.pagarImposto(novaPf.rendimento).ToString("N2"));
 
-                        if (idadeValida == true)
-                        {
-                            Console.WriteLine($"Cadastro Aprovado!");
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Cadastro Reprovado!");
-                        }
+                                    break;
 
-                        Console.WriteLine(pf.pagarImposto(novaPf.rendimento).ToString("N2"));
+                                case "2":
+                                    // Instancia a Pessoa Juridica e Chama Metodo
+                                    PessoaJuridica pj = new PessoaJuridica();
 
-                        break;
+                                    // Para Receber valor / Atributos
+                                    PessoaJuridica novaPj = new PessoaJuridica();
 
-                    case "2":
-                        // Instancia a Pessoa Juridica e Chama Metodo
-                        PessoaJuridica pj = new PessoaJuridica();
+                                    Endereco endPj = new Endereco();
 
-                        // Para Receber valor / Atributos
-                        PessoaJuridica novaPj = new PessoaJuridica();
+                                    // Instanciando Endereco
+                                    endPj.logradouro = "Z";
+                                    endPj.numero = 34;
+                                    endPj.complemento = "Proximo ao Senai Presidente Dutra";
+                                    endPj.enderecoComercial = true;
 
-                        Endereco endPj = new Endereco();
+                                    novaPj.endereco = endPj;
+                                    novaPj.cnpj = "31235679230001";
+                                    novaPj.RazaoSocial = "Pessoa Juridica";
+                                    novaPj.rendimento = 5000;
 
-                        // Instanciando Endereco
-                        endPj.logradouro = "Z";
-                        endPj.numero = 34;
-                        endPj.complemento = "Proximo ao Senai Presidente Dutra";
-                        endPj.enderecoComercial = true;
+                                    // No Pessoa Fisica guardando no bool | Exemplo a baixo realizado direto
+                                    // Se for condiçao true nao precisa adiconar return true | Se for false no inicio da comparação adicionar o "!"
+                                    if (pj.ValidarCNPJ(novaPj.cnpj))
+                                    {
+                                        Console.WriteLine($"CNPJ iNVALIDO");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine($"CNPJ Cadastrado com Sucesso");
+                                    };
+                                    Console.WriteLine(pj.pagarImposto(novaPj.rendimento).ToString("N2"));
 
-                        novaPj.endereco = endPj;
-                        novaPj.cnpj = "31235679230001";
-                        novaPj.RazaoSocial = "Pessoa Juridica";
-                        novaPj.rendimento = 5000;
+                                    break;
+                                case "0":
+                                    Console.Clear();
+                                    Console.WriteLine($"Obrigado Por Utilizar nosso sistema");
 
-                        // No Pessoa Fisica guardando no bool | Exemplo a baixo realizado direto
-                        // Se for condiçao true nao precisa adiconar return true | Se for false no inicio da comparação adicionar o "!"
-                        if (pj.ValidarCNPJ(novaPj.cnpj))
-                        {
-                            Console.WriteLine($"CNPJ iNVALIDO");
-                        }
-                        else
-                        {
-                            Console.WriteLine($"CNPJ Cadastrado com Sucesso");
-                        };
-                        Console.WriteLine(pj.pagarImposto(novaPj.rendimento).ToString("N2"));
+                                    Console.ForegroundColor = ConsoleColor.DarkBlue;
 
-                        break;
+                                    Console.WriteLine($"Finalizando");
+                                    Thread.Sleep(500);
 
+                                    for (var adicionarDot = 0; adicionarDot < 10; adicionarDot++)
+                                    {
+                                        Console.Write($".");
+                                        Thread.Sleep(250);
+                                    }
+                                    Console.ResetColor();
+
+                                    break;
+
+                                default:
+                                    Console.ResetColor();
+                                    Console.WriteLine($"Opção Inválida, por favor digite uma opção válida");
+                                    break;
+                            }
+                        } while (opcao != "0");
+                    break;
+                    // Aqui a acaba a parte de Cadastro de Pessoas
                     case "0":
                         Console.Clear();
                         Console.WriteLine($"Obrigado Por Utilizar nosso sistema");
@@ -136,24 +191,23 @@ namespace cadastroPessoa
                         Console.WriteLine($"Opção Inválida, por favor digite uma opção válida");
                         break;
                 }
-
-            } while (opcao != "0");
-
-        }
-        static void AdicionarDot(string textoCarregamento)
-        {
-            Console.ResetColor();
-
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine(textoCarregamento);
-
-            Thread.Sleep(500);
-            for (var i = 0; i < 10; i++)
-            {
-                Console.Write($".");
-                Thread.Sleep(250);
+                } while(opcaoInicial != "0");
+                
             }
-            Console.ResetColor();
+        static void AdicionarDot(string textoCarregamento)
+            {
+                Console.ResetColor();
+
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                Console.WriteLine(textoCarregamento);
+
+                Thread.Sleep(500);
+                for (var i = 0; i < 10; i++)
+                {
+                    Console.Write($".");
+                    Thread.Sleep(250);
+                }
+                Console.ResetColor();
+            }
         }
     }
-}
