@@ -93,11 +93,11 @@ namespace cadastroPessoa
                         Console.WriteLine($"Digite seu Nome");
                         novaPf.cpf = Console.ReadLine();
 
-                        Console.WriteLine($"Digite sua data de nascimento EX: AAAA-MM-DD");
-                        novaPf.rendimento = float.Parse(Console.ReadLine());
-
                         // Instanciando o rendimento
                         Console.WriteLine($"Digite o valor do seu rendimento mensal (somente numeros)");
+                        novaPf.rendimento = float.Parse(Console.ReadLine());
+
+                        Console.WriteLine($"Digite sua data de nascimento EX: AAAA-MM-DD");
                         novaPf.dataNascimento = DateTime.Parse(Console.ReadLine());
 
                         // Usando a funçao de validar data | Passo a Passo
