@@ -65,7 +65,7 @@ namespace cadastroPessoa
                         Console.WriteLine($"Digite seu Logradouro");
                         endPf.logradouro = Console.ReadLine();
 
-                        Console.WriteLine($"Digite seu Logradouro");
+                        Console.WriteLine($"Digite o numero");
                         endPf.numero = int.Parse(Console.ReadLine());
 
                         Console.WriteLine($"Digite seu complemento (aperte ENTER para vazio)");
