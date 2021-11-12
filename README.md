@@ -66,6 +66,11 @@ Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/
     <td align="center">29/10</td>
     <td align="center">✔️</td>
   </tr>
+  <tr>
+    <td>Encontro Remoto 7</td>
+    <td align="center">05/11</td>
+    <td align="center">✔️</td>
+  </tr>
   </table>
  </div>
 
