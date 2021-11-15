@@ -109,7 +109,7 @@ namespace cadastroPessoa
                         {
                             Console.WriteLine($"Cadastro Aprovado!");
                             listaPf.Add(novaPf);
-                            Console.WriteLine(pf.pagarImposto(novaPf.rendimento).ToString("N2"));
+                            Console.WriteLine($@"Seu Imposto e: {pf.pagarImposto(novaPf.rendimento).ToString("N2")}");
                         }
                         else
                         {
@@ -128,6 +128,7 @@ Endereço: {cadaItem.endereco.logradouro} N°{cadaItem.endereco.numero}");
                         }
                         break;
 
+                    // 3° Opcao de Remover Pessoa Fisica
                     case "3":
                         Console.WriteLine($"Digite o CPF que deseja remover");
                         string cpfProcurado = Console.ReadLine();
@@ -137,11 +138,11 @@ Endereço: {cadaItem.endereco.logradouro} N°{cadaItem.endereco.numero}");
                         if (pessoaEncontrada != null)
                         {
                             listaPf.Remove(pessoaEncontrada);
-                            Console.WriteLine($"Cadastro Removido");
+                            Console.WriteLine($"Cadastro Removido!");
                         }
                         else
                         {
-                            Console.WriteLine($"CPF não encontrado");
+                            Console.WriteLine($"CPF não encontrado!");
                         }
                         break;
 
