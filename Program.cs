@@ -52,6 +52,7 @@ namespace cadastroPessoa
 
                 switch (opcao)
                 {
+                    // 1° Opcao de Cadastrar Pessoa Fisica
                     case "1":
                         // Usado apenas para chamar os objetos
                         PessoaFisica pf = new PessoaFisica();
@@ -91,7 +92,7 @@ namespace cadastroPessoa
                         novaPf.cpf = Console.ReadLine();
 
                         Console.WriteLine($"Digite seu Nome");
-                        novaPf.cpf = Console.ReadLine();
+                        novaPf.nome = Console.ReadLine();
 
                         // Instanciando o rendimento
                         Console.WriteLine($"Digite o valor do seu rendimento mensal (somente numeros)");
@@ -117,6 +118,7 @@ namespace cadastroPessoa
 
                         break;
 
+                    // 2° Opcao de Listar Pessoa Fisica
                     case "2":
                         foreach (var cadaItem in listaPf)
                         {
