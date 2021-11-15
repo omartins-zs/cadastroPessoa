@@ -122,7 +122,9 @@ namespace cadastroPessoa
                     case "2":
                         foreach (var cadaItem in listaPf)
                         {
-                            Console.WriteLine($"{cadaItem.nome}, {cadaItem.cpf},{cadaItem.endereco.logradouro}");
+                            Console.WriteLine($@"
+Nome: {cadaItem.nome} | CPF: {cadaItem.cpf}
+Endereço: {cadaItem.endereco.logradouro} N°{cadaItem.endereco.numero}");
                         }
                         break;
 
