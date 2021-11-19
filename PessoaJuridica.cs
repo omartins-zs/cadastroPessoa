@@ -1,3 +1,5 @@
+using System.IO;
+
 namespace cadastroPessoa
 {
     public class PessoaJuridica : Pessoa
@@ -32,6 +34,12 @@ namespace cadastroPessoa
                 return true;
             }
             return false;
+        }
+
+        // Prepara a linha para criar e salvar o Arquivo csv
+        public string PrepararLinhasCsv(PessoaJuridica pj)
+        {
+            return $"{pj.nome};{pj.cnpj};{pj.RazaoSocial}";
         }
     }
 }
