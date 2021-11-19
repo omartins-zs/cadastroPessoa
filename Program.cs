@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading;
 
 namespace cadastroPessoa
@@ -115,6 +116,13 @@ namespace cadastroPessoa
                         {
                             Console.WriteLine($"Cadastro Reprovado!");
                         }
+
+                        // Criando e guardando em arquivo.txt
+
+                        // Metodo 1 | Coloquei "sw" para lembrar o Stream Writer
+                        StreamWriter sw = new StreamWriter($"{novaPf.nome}.txt");
+                        sw.Write($"{novaPf.nome} | {novaPf.cpf}");
+                        sw.Close();
 
                         break;
 
