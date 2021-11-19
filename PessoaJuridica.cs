@@ -41,5 +41,13 @@ namespace cadastroPessoa
         {
             return $"{pj.nome};{pj.cnpj};{pj.RazaoSocial}";
         }
+
+        // Inseri o conteudo no Arquivo CSV
+        public void Inserir(PessoaJuridica pj)
+        {
+            string[] linhas = { PrepararLinhasCsv(pj) };
+
+            File.AppendAllLines(caminho, linhas);
+        }
     }
 }
