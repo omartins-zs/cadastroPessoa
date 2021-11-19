@@ -1,3 +1,5 @@
+using System.IO;
+
 namespace cadastroPessoa
 {
     public abstract class Pessoa
@@ -12,5 +14,22 @@ namespace cadastroPessoa
 
         public abstract double pagarImposto(float salario);
 
+        // Adicionando Verificacao de Criar arquivo
+        public void VerificarArquiuvo(string caminho)
+        {
+            string pasta = caminho.Split("/")[0];
+
+            // Verifica se existe a Pasta | "!" muda a condicao para false
+            if (!Directory.Exists(pasta))
+            {
+                Directory.CreateDirectory(pasta);
+            }
+
+            // Verifica se existe o arquivo
+            if (!File.Exists(caminho))
+            {
+                File.Create(caminho);
+            }
+        }
     }
 }

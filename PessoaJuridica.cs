@@ -6,6 +6,9 @@ namespace cadastroPessoa
 
         public string RazaoSocial { get; set; }
 
+        // Para definir o caminho de criaçao do Arquivo csv
+        public string caminho { get; private set; } = "Database/PessoaJuridca.csv";
+
         // Adicionando Polimorfismo
         public override double pagarImposto(float rendimento)
         {
