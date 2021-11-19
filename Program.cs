@@ -187,6 +187,7 @@ Endereço: {cadaItem.endereco.logradouro} N°{cadaItem.endereco.numero}");
                         novaPj.endereco = endPj;
                         novaPj.cnpj = "31235679230001";
                         novaPj.RazaoSocial = "Pessoa Juridica";
+                        novaPj.nome = "nome da Pessoa Juridica";
                         novaPj.rendimento = 5000;
 
                         // No Pessoa Fisica guardando no bool | Exemplo a baixo realizado direto
@@ -199,7 +200,14 @@ Endereço: {cadaItem.endereco.logradouro} N°{cadaItem.endereco.numero}");
                         {
                             Console.WriteLine($"CNPJ Cadastrado com Sucesso");
                         };
+
                         Console.WriteLine(pj.pagarImposto(novaPj.rendimento).ToString("N2"));
+
+                        // Verificaçao a Existencia da Pasta e Arquivo e Cria
+                        pj.VerificarArquivo(pj.caminho);
+
+                        // Inseri o Conteudo no CSV 
+                        pj.Inserir(novaPj);
 
                         break;
 
