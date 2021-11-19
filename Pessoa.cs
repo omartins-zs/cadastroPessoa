@@ -15,7 +15,7 @@ namespace cadastroPessoa
         public abstract double pagarImposto(float salario);
 
         // Adicionando Verificacao de Criar arquivo
-        public void VerificarArquiuvo(string caminho)
+        public void VerificarArquivo(string caminho)
         {
             string pasta = caminho.Split("/")[0];
 
