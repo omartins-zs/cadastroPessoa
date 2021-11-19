@@ -119,10 +119,17 @@ namespace cadastroPessoa
 
                         // Criando e guardando em arquivo.txt
 
-                        // Metodo 1 | Coloquei "sw" para lembrar o Stream Writer
-                        StreamWriter sw = new StreamWriter($"{novaPf.nome}.txt");
-                        sw.Write($"{novaPf.nome} | {novaPf.cpf}");
-                        sw.Close();
+                        // // Metodo 1 | Coloquei "sw" para lembrar o Stream Writer
+                        // StreamWriter sw = new StreamWriter($"{novaPf.nome}.txt");
+                        // sw.Write($"{novaPf.nome} | {novaPf.cpf}");
+                        // sw.Close();
+
+                        // Metodo 2 | Esse metodo nao precisamos nos preocupar com o "sw.Close"
+                        using (StreamWriter sw = new StreamWriter($"{novaPf.nome}.txt"))
+                        {
+                            // sw.Write ou sw.WriteLine serve para Escrever como o cwl
+                            sw.Write($"{novaPf.nome} | {novaPf.cpf}");
+                        }
 
                         break;
 
