@@ -209,6 +209,12 @@ Endereço: {cadaItem.endereco.logradouro} N°{cadaItem.endereco.numero}");
                         // Inseri o Conteudo no CSV 
                         pj.Inserir(novaPj);
 
+                        // Le o Arquivo CSV
+                        foreach (var item in pj.Ler())
+                        {
+                            Console.WriteLine($"Nome: {item.nome}  - CNPJ: {item.cnpj} - Razao social: {item.RazaoSocial}");
+                        }
+
                         break;
 
                     case "0":
