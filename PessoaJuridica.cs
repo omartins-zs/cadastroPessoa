@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 
 namespace cadastroPessoa
@@ -48,6 +49,28 @@ namespace cadastroPessoa
             string[] linhas = { PrepararLinhasCsv(pj) };
 
             File.AppendAllLines(caminho, linhas);
+        }
+
+        public List<PessoaJuridica> Ler()
+        {
+            // Transformando Objeto linhas CSV em lista 
+            List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
+
+            string[] linhas = File.ReadAllLines(caminho);
+            // | Lendo todo o Arquivo CSV
+            foreach (var cadaLinha in linhas)
+            {
+                string[] atributos = cadaLinha.Split(";");
+
+                PessoaJuridica cadaPj = new PessoaJuridica();
+
+                cadaPj.nome = atributos[0];
+                cadaPj.cnpj = atributos[1];
+                cadaPj.RazaoSocial = atributos[2];
+
+                listaPj.Add(cadaPj);
+            }
+            return listaPj;
         }
     }
 }
