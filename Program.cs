@@ -169,6 +169,7 @@ Endereço: {cadaItem.endereco.logradouro} N°{cadaItem.endereco.numero}");
                         }
                         break;
 
+                    // 4° Opcao de Cadastrar Pessoa Juridica
                     case "4":
                         // Instancia a Pessoa Juridica e Chama Metodo
                         PessoaJuridica pj = new PessoaJuridica();
@@ -210,9 +211,17 @@ Endereço: {cadaItem.endereco.logradouro} N°{cadaItem.endereco.numero}");
                         pj.Inserir(novaPj);
 
                         // Le o Arquivo CSV
-                        foreach (var item in pj.Ler())
+
+                        if (pj.Ler().Count > 0)
                         {
-                            Console.WriteLine($"Nome: {item.nome}  - CNPJ: {item.cnpj} - Razao social: {item.RazaoSocial}");
+                            foreach (var item in pj.Ler())
+                            {
+                                Console.WriteLine($"Nome: {item.nome}  - CNPJ: {item.cnpj} - Razao social: {item.RazaoSocial}");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Lista Vazia");
                         }
 
                         break;
