@@ -20,10 +20,10 @@ Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/
 
 <br>
 
-<div> 
- 
-<table>
-  <tr>
+
+<div style="float: left">
+  <table>
+    <tr>
     <th colspan="4">UC9 SA2 Codificação Back-End</th>
   </tr>
   <tr>
@@ -34,6 +34,11 @@ Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/
     <th>Data do Encontro</th>
     <th>Status</th>
 
+  </tr>
+     <tr>
+    <td>Webinar 2 e 3 POO</td>
+    <td align="center">17/09</td>
+    <td align="center">✔️</td>
   </tr>
   <tr>
     <td>Encontro Remoto 1</td>
@@ -56,7 +61,23 @@ Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/
     <td align="center">15/10</td>
     <td align="center">✔️</td>
   </tr>
- <tr>
+  </table>
+</div>
+<div style="float: left">
+  <table>
+     <tr>
+    <th colspan="4">UC9 SA2 Codificação Back-End</th>
+  </tr>
+  <tr>
+    <th colspan="4"></th>
+  </tr>
+  <tr>
+    <th>Desafio</th>
+    <th>Data do Encontro</th>
+    <th>Status</th>
+
+  </tr>
+     <tr>
     <td>Encontro Remoto 5</td>
     <td align="center">22/10</td>
     <td align="center">✔️</td>
@@ -71,8 +92,20 @@ Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/
     <td align="center">05/11</td>
     <td align="center">✔️</td>
   </tr>
+   <tr>
+    <td>Encontro Remoto 8</td>
+    <td align="center">12/11</td>
+    <td align="center">✔️</td>
+  </tr>
+   <tr>
+    <td>Encontro Remoto 9</td>
+    <td align="center">19/11</td>
+    <td align="center">✔️</td>
+  </tr>
   </table>
- </div>
+</div>
+
+
 
 ### 🔴 Requisitos:
 
