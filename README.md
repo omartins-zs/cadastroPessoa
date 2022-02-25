@@ -8,6 +8,26 @@ Introdução ao .NET: [Documentação C#](https://docs.microsoft.com/pt-br/dotne
 
 Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/05/oop_cph1.htm)
 
+			
+## 👨‍💻️ Tecnologias Utilizadas
+Esse projeto foi criado utilizando as tecnologias:
+### Back-End
+- [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
+- [.NET](https://dotnet.microsoft.com/download)
+### Editor
+- [Visual Studio Code](https://code.visualstudio.com/)
+---
+## 📦️ Como rodar o projeto
+```bash
+# Clone o repositório
+❯ git clone https://github.com/omartins-zs/cadastroPessoa.git
+# Entre no diretório
+❯ cd cadastroPessoa
+# Execute o projeto
+❯ dotnet run
+```
+
+
 ## 🔮 Funcionalidades 
 
   - [x] Criar Pessoa Fisica
