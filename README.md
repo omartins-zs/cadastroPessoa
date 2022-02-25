@@ -8,9 +8,14 @@ Introdução ao .NET: [Documentação C#](https://docs.microsoft.com/pt-br/dotne
 
 Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/05/oop_cph1.htm)
 
+## 🔮 Funcionalidades 
 
+  - [x] Criar Pessoa Fisica
+  - [x] Criar Pessoa Juridica
+  - [x] Listar Pessoa Fisica
+  - [x] Listar Pessoa Juridica
+  - [x] Excluir Pessoa Fisica
 
- 
 ### Extensões: 
 
 * C#
