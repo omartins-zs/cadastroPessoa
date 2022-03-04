@@ -4,6 +4,11 @@
 <p align="center"> Utilização de Herança e Composiçao</p> 
 <br>
 
+<p align="center">
+<img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=green&style=for-the-badge"/>
+</p>
+
+
 Introdução ao .NET: [Documentação C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 
 Explicação Herança e Composiçao [Macoratti.net](http://www.macoratti.net/11/05/oop_cph1.htm)
